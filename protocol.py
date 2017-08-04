@@ -11,7 +11,7 @@ LoginQuery = Struct(
 KNXTelegram = Byte[11]
 
 KNXReply = Struct(
-	'unknown' / Byte[6],
+	'unknown' / Default(Byte[6], [0x00] * 6),
 	'amount' / Int32ub,
 	'index' / Int32ub,
 	'count' / Int8ub,
@@ -19,7 +19,8 @@ KNXReply = Struct(
 )
 
 KNXEvent = Struct(
-	'count' / Default(Int64ub, 0x0000000000000000),
+	'unknown' / Default(Byte[6], [0x00] * 6),
+	'count' / Default(Int16ub, 0x0000),
 	'knx_list' / KNXTelegram[this.count],
 )
 
@@ -39,13 +40,18 @@ Payload = Struct(
 	),
 	'len' / Default(Int16ub, 0x0000),
 	'data' / Switch(this.type, {
+		'Heartbeat': Byte[1],
+		'Heartbeat_Ack': Byte[1],
 		'Login': LoginQuery,
-		'Login_Ack': Const(Byte[1], [0x00]),
+		'Login_Ack': Byte[1],
 		'Init_KNX_Telegram': Byte[13],
 		'Init_KNX_Telegram_Reply': KNXReply,
+		'Init_KNX_Telegram_Reply_Ack': Byte[15],
 		'KNX_Telegram_Event': KNXEvent,
+		'KNX_Telegram_Event_Ack': Byte[8],
 		'KNX_Telegram_Publish': KNXEvent,
-	}, default=Byte[len_(this.data)]),
+		'KNX_Telegram_Publish_Ack': Byte[8],
+	}),
 	'bcc' / Default(Int8ub, 0x00),
 )
 

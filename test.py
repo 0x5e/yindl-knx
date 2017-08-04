@@ -5,7 +5,7 @@ from protocol import *
 
 def pkg_compare(pkg, obj):
 	pkg2 = Yindl.build(obj).encode('hex')
-	assert pkg == Yindl.build(obj).encode('hex'), '\n%s\n%s'%(pkg,pkg2)
+	assert pkg == pkg2, '\n%s\n%s'%(pkg,pkg2)
 
 heartbeat_pkg = 'ea61ea6001001500000000000000057b6aea62ea63'
 heartbeat_obj = {
@@ -60,7 +60,7 @@ knx_telegram_event_obj = {
 	'payload': {
 		'type': 'KNX_Telegram_Event',
 		'data': {
-			'count': 0x0000000000000002,
+			'count': 0x0002,
 			'knx_list': [
 				[0x00, 0x00, 0x00, 0x0d, 0x0f, 0x00, 0x04, 0x00, 0x40, 0x00, 0x00],
 				[0x00, 0x00, 0x00, 0x0e, 0x0f, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00],
