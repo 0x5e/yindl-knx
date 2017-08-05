@@ -97,7 +97,13 @@ class YindlClient(asyncore.dispatcher):
 			self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
 
 	def knx_event_callback(self, pkg):
-		print('KNX Event: ', pkg.data.knx_list)
+		for knx_telegram in pkg.data.knx_list:
+			self.knx_update(knx_telegram)
+
+	def knx_update(self, knx_telegram):
+		index = knx_telegram[3]
+		self.knx_list[index] = knx_telegram
+		print('KNX update: %s' % ''.join(map(chr, knx_telegram)).encode('hex'))
 
 def knx_publish_loop():
 	raw_input()
