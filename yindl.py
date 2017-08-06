@@ -105,21 +105,27 @@ class YindlClient(asyncore.dispatcher):
 		self.knx_list[index] = knx_telegram
 		print('KNX update: %s' % ''.join(map(chr, knx_telegram)).encode('hex'))
 
+	def knx_publish(self, knx_telegram_list):
+		knx_telegram_list = map(bytearray, knx_telegram_list)
+		knx_telegram_list = map(list, knx_telegram_list)
+		self.send_pkg({
+			'type': 'KNX_Telegram_Publish',
+			'data': {
+				'count': len(knx_telegram_list),
+				'knx_list': knx_telegram_list,
+			}
+		})
+
 def knx_publish_loop():
 	raw_input()
 	while True:
 		knx_telegram = raw_input('Input KNX Telegram: ').decode('hex')
 		if len(knx_telegram) != 11:
 			continue
-		client.send_pkg({
-			'type': 'KNX_Telegram_Publish',
-			'data': {
-				'count': 0x0001,
-				'knx_list': [list(bytearray(knx_telegram))],
-			}
-		})
-thread.start_new_thread(knx_publish_loop, ())
+		client.knx_publish([knx_telegram])
 
-print('---------- SIEMENS Smart Home ----------')
-client = YindlClient('192.168.1.251', 60002)
-asyncore.loop(timeout=0.5)
+if __name__ == '__main__':
+	print('---------- SIEMENS Smart Home ----------')
+	thread.start_new_thread(knx_publish_loop, ())
+	client = YindlClient('192.168.1.251', 60002)
+	asyncore.loop(timeout=0.5)
