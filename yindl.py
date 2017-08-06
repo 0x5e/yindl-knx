@@ -9,15 +9,16 @@ import time
 import logging
 from protocol import Yindl, Payload
 
-logging.basicConfig(format='%(asctime)s %(levelname)-5s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)s %(levelname)-5s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=logging.INFO)
 
 class YindlClient(asyncore.dispatcher):
 
-	def __init__(self, host, port):
+	def __init__(self, host, port, callback=None):
 		asyncore.dispatcher.__init__(self)
 		self.create_socket(socket.AF_INET, socket.SOCK_STREAM)
 		self.connect((host, port))
 		self.buffer = []
+		self.knx_callback = callback
 
 	def handle_connect(self):
 		logging.info('Connected')
@@ -37,15 +38,15 @@ class YindlClient(asyncore.dispatcher):
 		elif pkg.type == 'Login_Ack':
 			logging.info('Login success')
 		elif pkg.type == 'Init_KNX_Telegram_Reply':
-			self.knx_list += pkg.data.knx_list
+			self.knx_update(pkg.data.knx_list)
 			self.send_pkg({
 				'type': 'Init_KNX_Telegram_Reply_Ack',
 				'data': list(bytearray(Payload.build(pkg)[4:19])),
 			})
 			if pkg.data.index - 1 + pkg.data.count == pkg.data.amount:
-				logging.info('KNX Telegrams all loaded, count: %d' % len(self.knx_list))
+				logging.info('KNX Telegrams all loaded, count: %d' % pkg.data.amount)
 		elif pkg.type == 'KNX_Telegram_Event':
-			self.knx_event_callback(pkg)
+			self.knx_update(pkg.data.knx_list)
 			self.send_pkg({
 				'type': 'KNX_Telegram_Event_Ack',
 				'data': list(bytearray(Payload.build(pkg)[4:12])),
@@ -88,7 +89,7 @@ class YindlClient(asyncore.dispatcher):
 			'type': 'Init_KNX_Telegram',
 			'data': [0x00] * 13,
 		})
-		self.knx_list = []
+		self.knx_dict = {}
 
 	def heartbeat_loop(self):
 		logging.info('Start heartbeat loop')
@@ -96,16 +97,18 @@ class YindlClient(asyncore.dispatcher):
 			time.sleep(60)
 			self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
 
-	def knx_event_callback(self, pkg):
-		for knx_telegram in pkg.data.knx_list:
-			self.knx_update(knx_telegram)
-
-	def knx_update(self, knx_telegram):
-		index = knx_telegram[3]
-		self.knx_list[index] = knx_telegram
-		print('KNX update: %s' % ''.join(map(chr, knx_telegram)).encode('hex'))
+	def knx_update(self, knx_telegram_list):
+		for knx_telegram in knx_telegram_list:
+			knx_telegram = ''.join(map(chr, knx_telegram))
+			logging.info('KNX  <--- %s' % knx_telegram.encode('hex'))
+			index = knx_telegram[3]
+			self.knx_dict[index] = knx_telegram
+			if self.knx_callback != None:
+				self.knx_callback(knx_telegram)
 
 	def knx_publish(self, knx_telegram_list):
+		for knx_telegram in knx_telegram_list:
+			logging.info('KNX  ---> %s' % knx_telegram.encode('hex'))
 		knx_telegram_list = map(bytearray, knx_telegram_list)
 		knx_telegram_list = map(list, knx_telegram_list)
 		self.send_pkg({
