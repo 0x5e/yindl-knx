@@ -13,16 +13,18 @@ logging.basicConfig(format='%(asctime)s %(levelname)-5s %(message)s', datefmt='%
 
 class YindlClient(asyncore.dispatcher):
 
-	def __init__(self, host, port, callback=None):
+	def __init__(self, host, port, user, psw, callback=None):
 		asyncore.dispatcher.__init__(self)
 		self.create_socket(socket.AF_INET, socket.SOCK_STREAM)
 		self.connect((host, port))
+		self.user = user
+		self.psw = psw
 		self.buffer = []
 		self.knx_callback = callback
 
 	def handle_connect(self):
 		logging.info('Connected')
-		self.login('yindl', '24325356658776987')
+		self.login(self.user, self.psw)
 		self.init_knx()
 		thread.start_new_thread(self.heartbeat_loop, ())
 
@@ -130,5 +132,5 @@ def knx_publish_loop():
 if __name__ == '__main__':
 	print('---------- SIEMENS Smart Home ----------')
 	thread.start_new_thread(knx_publish_loop, ())
-	client = YindlClient('192.168.1.251', 60002)
+	client = YindlClient('192.168.1.251', 60002, 'yindl', '24325356658776987')
 	asyncore.loop(timeout=0.5)
