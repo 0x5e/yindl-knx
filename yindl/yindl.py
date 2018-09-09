@@ -10,30 +10,29 @@ import logging
 
 from .protocol import Yindl, Payload
 
-logging.basicConfig(format='%(asctime)s %(levelname)-5s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=logging.INFO)
+_LOGGER = logging.getLogger(__name__)
 
 class YindlClient(asyncore.dispatcher):
 
-  def __init__(self, host, port, user, psw, logger=logging, callback=None):
+  def __init__(self, host, port, user, psw, callback=None):
     asyncore.dispatcher.__init__(self)
     self.create_socket(socket.AF_INET, socket.SOCK_STREAM)
     self.connect((host, port))
     self.user = user
     self.psw = psw
-    self.logger=logger
     self.buffer = []
     self.knx_callback = callback
 
     asyncore.loop(timeout=0.5)
 
   def handle_connect(self):
-    self.logger.info('Connected')
+    _LOGGER.info('Connected')
     self.login(self.user, self.psw)
     self.init_knx()
     _thread.start_new_thread(self.heartbeat_loop, ())
 
   def handle_close(self):
-    self.logger.info('Closed')
+    _LOGGER.info('Closed')
     self.del_channel()
     self.close()
 
@@ -42,7 +41,7 @@ class YindlClient(asyncore.dispatcher):
     if pkg.type == 'Heartbeat_Ack':
       pass
     elif pkg.type == 'Login_Ack':
-      self.logger.info('Login success')
+      _LOGGER.info('Login success')
     elif pkg.type == 'Init_KNX_Telegram_Reply':
       self.knx_update(pkg.data.knx_list)
       self.send_pkg({
@@ -50,7 +49,7 @@ class YindlClient(asyncore.dispatcher):
         'data': list(bytearray(Payload.build(pkg)[4:19])),
       })
       if pkg.data.index - 1 + pkg.data.count == pkg.data.amount:
-        self.logger.info('KNX Telegrams all loaded, count: %d' % pkg.data.amount)
+        _LOGGER.info('KNX Telegrams all loaded, count: %d' % pkg.data.amount)
     elif pkg.type == 'KNX_Telegram_Event':
       self.knx_update(pkg.data.knx_list)
       self.send_pkg({
@@ -65,14 +64,14 @@ class YindlClient(asyncore.dispatcher):
 
   def handle_write(self):
     pkg = self.buffer.pop(0)
-    self.logger.debug('Send ---> %s' % pkg.hex())
+    _LOGGER.debug('Send ---> %s' % pkg.hex())
     self.send(pkg)
 
   def recv_pkg(self):
     buf = self.recv(11)
     length = struct.unpack('>H', buf[5:7])[0]
     buf += self.recv(length - len(buf))
-    self.logger.debug('Recv <--- %s' % buf.hex())
+    _LOGGER.debug('Recv <--- %s' % buf.hex())
     pkg = Yindl.parse(buf)
     return pkg.payload
 
@@ -81,7 +80,7 @@ class YindlClient(asyncore.dispatcher):
     self.buffer.append(pkg)
 
   def login(self, usr, psw):
-    self.logger.info('Login')
+    _LOGGER.info('Login')
     self.send_pkg({
       'type': 'Login',
       'data': {
@@ -98,14 +97,14 @@ class YindlClient(asyncore.dispatcher):
     self.knx_dict = {}
 
   def heartbeat_loop(self):
-    self.logger.info('Start heartbeat loop')
+    _LOGGER.info('Start heartbeat loop')
     while True:
       time.sleep(60)
       self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
 
   def knx_update(self, knx_telegram_list):
     for knx_telegram in knx_telegram_list:
-      self.logger.info('KNX  <--- %s' % bytes(knx_telegram).hex())
+      _LOGGER.info('KNX  <--- %s' % bytes(knx_telegram).hex())
       index = knx_telegram[3]
       self.knx_dict[index] = knx_telegram
       if self.knx_callback != None:
@@ -113,7 +112,7 @@ class YindlClient(asyncore.dispatcher):
 
   def knx_publish(self, knx_telegram_list):
     for knx_telegram in knx_telegram_list:
-      self.logger.info('KNX  ---> %s' % bytes(knx_telegram).hex())
+      _LOGGER.info('KNX  ---> %s' % bytes(knx_telegram).hex())
     knx_telegram_list = map(bytearray, knx_telegram_list)
     knx_telegram_list = map(list, knx_telegram_list)
     self.send_pkg({
