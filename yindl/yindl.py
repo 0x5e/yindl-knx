@@ -107,7 +107,4 @@ class YindlClient():
 
   def start(self):
     loop = asyncio.get_event_loop()
-    if loop.is_running():
-      self.run(loop)
-    else:
-      loop.run_until_complete(self.run(loop))
+    loop.run_until_complete(self.run(loop))
