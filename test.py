@@ -88,3 +88,4 @@ if __name__ == '__main__':
   print('---------- SIEMENS Smart Home ----------')
   _thread.start_new_thread(knx_publish_loop, ())
   client = YindlClient('192.168.1.251', 60002, 'yindl', '24325356658776987')
+  client.start()

@@ -23,13 +23,11 @@ class YindlClient(asyncore.dispatcher):
     self.buffer = []
     self.knx_callback = callback
 
-    asyncore.loop(timeout=0.5)
-
   def handle_connect(self):
     _LOGGER.info('Connected')
     self.login(self.user, self.psw)
     self.init_knx()
-    _thread.start_new_thread(self.heartbeat_loop, ())
+    self.heartbeat_thread = _thread.start_new_thread(self.heartbeat_loop, ())
 
   def handle_close(self):
     _LOGGER.info('Closed')
@@ -96,12 +94,6 @@ class YindlClient(asyncore.dispatcher):
     })
     self.knx_dict = {}
 
-  def heartbeat_loop(self):
-    _LOGGER.info('Start heartbeat loop')
-    while True:
-      time.sleep(60)
-      self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
-
   def knx_update(self, knx_telegram_list):
     for knx_telegram in knx_telegram_list:
       _LOGGER.info('KNX  <--- %s' % bytes(knx_telegram).hex())
@@ -122,3 +114,12 @@ class YindlClient(asyncore.dispatcher):
         'knx_list': knx_telegram_list,
       }
     })
+
+  def heartbeat_loop(self):
+    _LOGGER.info('Start heartbeat loop')
+    while True:
+      time.sleep(60)
+      self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
+
+  def start(self):
+    asyncore.loop(timeout=15.0)
