@@ -2,7 +2,6 @@
 # coding=utf-8
 
 import asyncio
-import socket
 import struct
 import threading
 import time
@@ -107,6 +106,11 @@ class YindlClient():
       self.send_pkg({'type': 'Heartbeat', 'data': [0x7b]})
 
   def start(self):
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(self.run(loop))
-    loop.close()
+    try:
+      loop = asyncio.get_event_loop()
+      if loop.is_running():
+        self.run(loop)
+      else:
+        loop.run_until_complete(self.run(loop))
+    finally:
+      loop.close()
