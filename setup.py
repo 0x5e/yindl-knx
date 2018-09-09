@@ -10,7 +10,7 @@ setup(
   author_email='0x5e@sina.cn',
   description='',
   url='https://github.com/0x5e/yindl-knx',
-  packages=['src'],
+  packages=['yindl'],
   install_requires=[
     'construct>=2.9',
   ]

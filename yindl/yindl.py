@@ -8,7 +8,7 @@ import _thread
 import time
 import logging
 
-from protocol import Yindl, Payload
+from .protocol import Yindl, Payload
 
 logging.basicConfig(format='%(asctime)s %(levelname)-5s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', level=logging.INFO)
 
