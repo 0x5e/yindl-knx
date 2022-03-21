@@ -3,25 +3,19 @@
     <Light-Tree>
         <Area Name="全部" Style="0">
             <Area Name="客厅" Style="1">
-                <Light>
-                    <Light Name="射灯" Style="0" Write="5" Read="6"/>
-                    <Light Name="灯带" Style="0" Write="7" Read="8"/>
-                    <Light Name="烛灯" Style="0" Write="9" Read="10"/>
-                    <Light Name="吊灯" Style="1" Write="11" Read="12"/>
-                </Light>
+                <Light Name="射灯" Style="0" Write="5" Read="6"/>
+                <Light Name="灯带" Style="0" Write="7" Read="8"/>
+                <Light Name="烛灯" Style="0" Write="9" Read="10"/>
+                <Light Name="吊灯" Style="1" Write="11" Read="12"/>
             </Area>
             <Area Name="餐厅" Style="1">
-                <Light>
-                    <Light Name="射灯1" Style="0" Write="13" Read="14"/>
-                    <Light Name="射灯2" Style="0" Write="15" Read="16"/>
-                    <Light Name="吊灯" Style="1" Write="17" Read="18"/>
-                </Light>
+                <Light Name="射灯1" Style="0" Write="13" Read="14"/>
+                <Light Name="射灯2" Style="0" Write="15" Read="16"/>
+                <Light Name="吊灯" Style="1" Write="17" Read="18"/>
             </Area>
             <Area Name="玄关" Style="1">
-                <Light>
-                    <Light Name="吊灯" Style="0" Write="1" Read="2"/>
-                    <Light Name="射灯" Style="0" Write="3" Read="4"/>
-                </Light>
+                <Light Name="吊灯" Style="0" Write="1" Read="2"/>
+                <Light Name="射灯" Style="0" Write="3" Read="4"/>
             </Area>
         </Area>
     </Light-Tree>
