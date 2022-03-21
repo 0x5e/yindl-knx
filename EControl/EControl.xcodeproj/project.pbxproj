@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D58761B27E8476000CC55A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58761A27E8476000CC55A4 /* AppDelegate.m */; };
+		6D58761E27E8476000CC55A4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58761D27E8476000CC55A4 /* SceneDelegate.m */; };
+		6D58762127E8476000CC55A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58762027E8476000CC55A4 /* ViewController.m */; };
+		6D58762427E8476000CC55A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D58762227E8476000CC55A4 /* Main.storyboard */; };
+		6D58762627E8476100CC55A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D58762527E8476100CC55A4 /* Assets.xcassets */; };
+		6D58762927E8476100CC55A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D58762727E8476100CC55A4 /* LaunchScreen.storyboard */; };
+		6D58762C27E8476100CC55A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58762B27E8476100CC55A4 /* main.m */; };
+		6D58764227E84AEB00CC55A4 /* libEControl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6D58763827E8492A00CC55A4 /* libEControl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6D58765F27E84C1800CC55A4 /* 3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764527E84C1800CC55A4 /* 3-1.png */; };
+		6D58766027E84C1800CC55A4 /* 空调除湿模式白色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764627E84C1800CC55A4 /* 空调除湿模式白色.png */; };
+		6D58766127E84C1800CC55A4 /* 8-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764727E84C1800CC55A4 /* 8-0.png */; };
+		6D58766227E84C1800CC55A4 /* 5-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764827E84C1800CC55A4 /* 5-0.png */; };
+		6D58766327E84C1800CC55A4 /* 1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764927E84C1800CC55A4 /* 1-1.png */; };
+		6D58766427E84C1800CC55A4 /* 0-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764A27E84C1800CC55A4 /* 0-0.png */; };
+		6D58766527E84C1800CC55A4 /* 4-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764B27E84C1800CC55A4 /* 4-0.png */; };
+		6D58766627E84C1800CC55A4 /* 0-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764C27E84C1800CC55A4 /* 0-1.png */; };
+		6D58766727E84C1800CC55A4 /* 2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764D27E84C1800CC55A4 /* 2-1.png */; };
+		6D58766827E84C1800CC55A4 /* 7-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764E27E84C1800CC55A4 /* 7-0.png */; };
+		6D58766927E84C1800CC55A4 /* 空调送风模式白色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764F27E84C1800CC55A4 /* 空调送风模式白色.png */; };
+		6D58766A27E84C1800CC55A4 /* 调光滑块.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765027E84C1800CC55A4 /* 调光滑块.png */; };
+		6D58766B27E84C1800CC55A4 /* 空调制冷模式白色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765127E84C1800CC55A4 /* 空调制冷模式白色.png */; };
+		6D58766C27E84C1800CC55A4 /* 空调制热模式白色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765227E84C1800CC55A4 /* 空调制热模式白色.png */; };
+		6D58766D27E84C1800CC55A4 /* 2-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765327E84C1800CC55A4 /* 2-0.png */; };
+		6D58766E27E84C1800CC55A4 /* 7-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765427E84C1800CC55A4 /* 7-1.png */; };
+		6D58766F27E84C1800CC55A4 /* 调光轨道_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765527E84C1800CC55A4 /* 调光轨道_02.png */; };
+		6D58767027E84C1800CC55A4 /* 3-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765627E84C1800CC55A4 /* 3-0.png */; };
+		6D58767127E84C1800CC55A4 /* 调光轨道_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765727E84C1800CC55A4 /* 调光轨道_01.png */; };
+		6D58767227E84C1800CC55A4 /* 1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765827E84C1800CC55A4 /* 1-0.png */; };
+		6D58767327E84C1800CC55A4 /* 菜单条.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765927E84C1800CC55A4 /* 菜单条.png */; };
+		6D58767427E84C1800CC55A4 /* 6-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765A27E84C1800CC55A4 /* 6-1.png */; };
+		6D58767527E84C1800CC55A4 /* 8-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765B27E84C1800CC55A4 /* 8-1.png */; };
+		6D58767627E84C1800CC55A4 /* 4-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765C27E84C1800CC55A4 /* 4-1.png */; };
+		6D58767727E84C1800CC55A4 /* 5-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765D27E84C1800CC55A4 /* 5-1.png */; };
+		6D58767827E84C1800CC55A4 /* 6-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58765E27E84C1800CC55A4 /* 6-0.png */; };
+		6D58767B27E84C2800CC55A4 /* Background-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58767927E84C2800CC55A4 /* Background-1.png */; };
+		6D58767C27E84C2800CC55A4 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58767A27E84C2800CC55A4 /* Background.png */; };
+		6D58767E27E84C3300CC55A4 /* EControl.momd in Resources */ = {isa = PBXBuildFile; fileRef = 6D58767D27E84C3300CC55A4 /* EControl.momd */; };
+		6D58768127E84C3F00CC55A4 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58767F27E84C3F00CC55A4 /* HOME.png */; };
+		6D58768227E84C3F00CC55A4 /* HOME-blackColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768027E84C3F00CC55A4 /* HOME-blackColor.png */; };
+		6D58769027E84C5600CC55A4 /* T-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768327E84C5600CC55A4 /* T-2.png */; };
+		6D58769127E84C5600CC55A4 /* scene_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768427E84C5600CC55A4 /* scene_02.png */; };
+		6D58769227E84C5600CC55A4 /* T-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768527E84C5600CC55A4 /* T-0.png */; };
+		6D58769327E84C5600CC55A4 /* T-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768627E84C5600CC55A4 /* T-3.png */; };
+		6D58769427E84C5600CC55A4 /* T-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768727E84C5600CC55A4 /* T-5.png */; };
+		6D58769527E84C5600CC55A4 /* title_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768827E84C5600CC55A4 /* title_01.png */; };
+		6D58769627E84C5600CC55A4 /* T-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768927E84C5600CC55A4 /* T-1.png */; };
+		6D58769727E84C5600CC55A4 /* T-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768A27E84C5600CC55A4 /* T-4.png */; };
+		6D58769827E84C5600CC55A4 /* title_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768B27E84C5600CC55A4 /* title_02.png */; };
+		6D58769927E84C5600CC55A4 /* Project in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768C27E84C5600CC55A4 /* Project */; };
+		6D58769A27E84C5600CC55A4 /* scene_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768D27E84C5600CC55A4 /* scene_01.png */; };
+		6D58769B27E84C5600CC55A4 /* T-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768E27E84C5600CC55A4 /* T-6.png */; };
+		6D58769C27E84C5600CC55A4 /* masque_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768F27E84C5600CC55A4 /* masque_black.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D58764327E84AEB00CC55A4 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6D58764227E84AEB00CC55A4 /* libEControl.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D58761627E8476000CC55A4 /* EControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D58761927E8476000CC55A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D58761A27E8476000CC55A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D58761C27E8476000CC55A4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6D58761D27E8476000CC55A4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		6D58761F27E8476000CC55A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D58762027E8476000CC55A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D58762327E8476000CC55A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D58762527E8476100CC55A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D58762827E8476100CC55A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D58762A27E8476100CC55A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D58762B27E8476100CC55A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D58763827E8492A00CC55A4 /* libEControl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libEControl.dylib; sourceTree = "<group>"; };
+		6D58764527E84C1800CC55A4 /* 3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-1.png"; sourceTree = "<group>"; };
+		6D58764627E84C1800CC55A4 /* 空调除湿模式白色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空调除湿模式白色.png"; sourceTree = "<group>"; };
+		6D58764727E84C1800CC55A4 /* 8-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-0.png"; sourceTree = "<group>"; };
+		6D58764827E84C1800CC55A4 /* 5-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-0.png"; sourceTree = "<group>"; };
+		6D58764927E84C1800CC55A4 /* 1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-1.png"; sourceTree = "<group>"; };
+		6D58764A27E84C1800CC55A4 /* 0-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0-0.png"; sourceTree = "<group>"; };
+		6D58764B27E84C1800CC55A4 /* 4-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-0.png"; sourceTree = "<group>"; };
+		6D58764C27E84C1800CC55A4 /* 0-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0-1.png"; sourceTree = "<group>"; };
+		6D58764D27E84C1800CC55A4 /* 2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-1.png"; sourceTree = "<group>"; };
+		6D58764E27E84C1800CC55A4 /* 7-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-0.png"; sourceTree = "<group>"; };
+		6D58764F27E84C1800CC55A4 /* 空调送风模式白色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空调送风模式白色.png"; sourceTree = "<group>"; };
+		6D58765027E84C1800CC55A4 /* 调光滑块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "调光滑块.png"; sourceTree = "<group>"; };
+		6D58765127E84C1800CC55A4 /* 空调制冷模式白色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空调制冷模式白色.png"; sourceTree = "<group>"; };
+		6D58765227E84C1800CC55A4 /* 空调制热模式白色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空调制热模式白色.png"; sourceTree = "<group>"; };
+		6D58765327E84C1800CC55A4 /* 2-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-0.png"; sourceTree = "<group>"; };
+		6D58765427E84C1800CC55A4 /* 7-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-1.png"; sourceTree = "<group>"; };
+		6D58765527E84C1800CC55A4 /* 调光轨道_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "调光轨道_02.png"; sourceTree = "<group>"; };
+		6D58765627E84C1800CC55A4 /* 3-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-0.png"; sourceTree = "<group>"; };
+		6D58765727E84C1800CC55A4 /* 调光轨道_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "调光轨道_01.png"; sourceTree = "<group>"; };
+		6D58765827E84C1800CC55A4 /* 1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-0.png"; sourceTree = "<group>"; };
+		6D58765927E84C1800CC55A4 /* 菜单条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "菜单条.png"; sourceTree = "<group>"; };
+		6D58765A27E84C1800CC55A4 /* 6-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-1.png"; sourceTree = "<group>"; };
+		6D58765B27E84C1800CC55A4 /* 8-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-1.png"; sourceTree = "<group>"; };
+		6D58765C27E84C1800CC55A4 /* 4-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1.png"; sourceTree = "<group>"; };
+		6D58765D27E84C1800CC55A4 /* 5-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-1.png"; sourceTree = "<group>"; };
+		6D58765E27E84C1800CC55A4 /* 6-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-0.png"; sourceTree = "<group>"; };
+		6D58767927E84C2800CC55A4 /* Background-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background-1.png"; sourceTree = "<group>"; };
+		6D58767A27E84C2800CC55A4 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		6D58767D27E84C3300CC55A4 /* EControl.momd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EControl.momd; sourceTree = "<group>"; };
+		6D58767F27E84C3F00CC55A4 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
+		6D58768027E84C3F00CC55A4 /* HOME-blackColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HOME-blackColor.png"; sourceTree = "<group>"; };
+		6D58768327E84C5600CC55A4 /* T-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-2.png"; sourceTree = "<group>"; };
+		6D58768427E84C5600CC55A4 /* scene_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene_02.png; sourceTree = "<group>"; };
+		6D58768527E84C5600CC55A4 /* T-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-0.png"; sourceTree = "<group>"; };
+		6D58768627E84C5600CC55A4 /* T-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-3.png"; sourceTree = "<group>"; };
+		6D58768727E84C5600CC55A4 /* T-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-5.png"; sourceTree = "<group>"; };
+		6D58768827E84C5600CC55A4 /* title_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_01.png; sourceTree = "<group>"; };
+		6D58768927E84C5600CC55A4 /* T-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-1.png"; sourceTree = "<group>"; };
+		6D58768A27E84C5600CC55A4 /* T-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-4.png"; sourceTree = "<group>"; };
+		6D58768B27E84C5600CC55A4 /* title_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_02.png; sourceTree = "<group>"; };
+		6D58768C27E84C5600CC55A4 /* Project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Project; sourceTree = "<group>"; };
+		6D58768D27E84C5600CC55A4 /* scene_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene_01.png; sourceTree = "<group>"; };
+		6D58768E27E84C5600CC55A4 /* T-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-6.png"; sourceTree = "<group>"; };
+		6D58768F27E84C5600CC55A4 /* masque_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masque_black.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D58761327E8476000CC55A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D58760D27E8476000CC55A4 = {
+			isa = PBXGroup;
+			children = (
+				6D58761827E8476000CC55A4 /* EControl */,
+				6D58761727E8476000CC55A4 /* Products */,
+				6D58763B27E849F300CC55A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D58761727E8476000CC55A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D58761627E8476000CC55A4 /* EControl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D58761827E8476000CC55A4 /* EControl */ = {
+			isa = PBXGroup;
+			children = (
+				6D58764427E84C0500CC55A4 /* Resource */,
+				6D58763827E8492A00CC55A4 /* libEControl.dylib */,
+				6D58761927E8476000CC55A4 /* AppDelegate.h */,
+				6D58761A27E8476000CC55A4 /* AppDelegate.m */,
+				6D58761C27E8476000CC55A4 /* SceneDelegate.h */,
+				6D58761D27E8476000CC55A4 /* SceneDelegate.m */,
+				6D58761F27E8476000CC55A4 /* ViewController.h */,
+				6D58762027E8476000CC55A4 /* ViewController.m */,
+				6D58762227E8476000CC55A4 /* Main.storyboard */,
+				6D58762527E8476100CC55A4 /* Assets.xcassets */,
+				6D58762727E8476100CC55A4 /* LaunchScreen.storyboard */,
+				6D58762A27E8476100CC55A4 /* Info.plist */,
+				6D58762B27E8476100CC55A4 /* main.m */,
+			);
+			path = EControl;
+			sourceTree = "<group>";
+		};
+		6D58763B27E849F300CC55A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D58764427E84C0500CC55A4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6D58764A27E84C1800CC55A4 /* 0-0.png */,
+				6D58764C27E84C1800CC55A4 /* 0-1.png */,
+				6D58765827E84C1800CC55A4 /* 1-0.png */,
+				6D58764927E84C1800CC55A4 /* 1-1.png */,
+				6D58765327E84C1800CC55A4 /* 2-0.png */,
+				6D58764D27E84C1800CC55A4 /* 2-1.png */,
+				6D58765627E84C1800CC55A4 /* 3-0.png */,
+				6D58764527E84C1800CC55A4 /* 3-1.png */,
+				6D58764B27E84C1800CC55A4 /* 4-0.png */,
+				6D58765C27E84C1800CC55A4 /* 4-1.png */,
+				6D58764827E84C1800CC55A4 /* 5-0.png */,
+				6D58765D27E84C1800CC55A4 /* 5-1.png */,
+				6D58765E27E84C1800CC55A4 /* 6-0.png */,
+				6D58765A27E84C1800CC55A4 /* 6-1.png */,
+				6D58764E27E84C1800CC55A4 /* 7-0.png */,
+				6D58765427E84C1800CC55A4 /* 7-1.png */,
+				6D58764727E84C1800CC55A4 /* 8-0.png */,
+				6D58765B27E84C1800CC55A4 /* 8-1.png */,
+				6D58765927E84C1800CC55A4 /* 菜单条.png */,
+				6D58765727E84C1800CC55A4 /* 调光轨道_01.png */,
+				6D58765527E84C1800CC55A4 /* 调光轨道_02.png */,
+				6D58765027E84C1800CC55A4 /* 调光滑块.png */,
+				6D58764627E84C1800CC55A4 /* 空调除湿模式白色.png */,
+				6D58764F27E84C1800CC55A4 /* 空调送风模式白色.png */,
+				6D58765127E84C1800CC55A4 /* 空调制冷模式白色.png */,
+				6D58765227E84C1800CC55A4 /* 空调制热模式白色.png */,
+				6D58767927E84C2800CC55A4 /* Background-1.png */,
+				6D58767A27E84C2800CC55A4 /* Background.png */,
+				6D58767D27E84C3300CC55A4 /* EControl.momd */,
+				6D58768027E84C3F00CC55A4 /* HOME-blackColor.png */,
+				6D58767F27E84C3F00CC55A4 /* HOME.png */,
+				6D58768F27E84C5600CC55A4 /* masque_black.png */,
+				6D58768C27E84C5600CC55A4 /* Project */,
+				6D58768D27E84C5600CC55A4 /* scene_01.png */,
+				6D58768427E84C5600CC55A4 /* scene_02.png */,
+				6D58768527E84C5600CC55A4 /* T-0.png */,
+				6D58768927E84C5600CC55A4 /* T-1.png */,
+				6D58768327E84C5600CC55A4 /* T-2.png */,
+				6D58768627E84C5600CC55A4 /* T-3.png */,
+				6D58768A27E84C5600CC55A4 /* T-4.png */,
+				6D58768727E84C5600CC55A4 /* T-5.png */,
+				6D58768E27E84C5600CC55A4 /* T-6.png */,
+				6D58768827E84C5600CC55A4 /* title_01.png */,
+				6D58768B27E84C5600CC55A4 /* title_02.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D58761527E8476000CC55A4 /* EControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D58762F27E8476100CC55A4 /* Build configuration list for PBXNativeTarget "EControl" */;
+			buildPhases = (
+				6D58761227E8476000CC55A4 /* Sources */,
+				6D58761327E8476000CC55A4 /* Frameworks */,
+				6D58761427E8476000CC55A4 /* Resources */,
+				6D58764327E84AEB00CC55A4 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EControl;
+			productName = EControl;
+			productReference = 6D58761627E8476000CC55A4 /* EControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D58760E27E8476000CC55A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					6D58761527E8476000CC55A4 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 6D58761127E8476000CC55A4 /* Build configuration list for PBXProject "EControl" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D58760D27E8476000CC55A4;
+			productRefGroup = 6D58761727E8476000CC55A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D58761527E8476000CC55A4 /* EControl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D58761427E8476000CC55A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D58767027E84C1800CC55A4 /* 3-0.png in Resources */,
+				6D58767227E84C1800CC55A4 /* 1-0.png in Resources */,
+				6D58766027E84C1800CC55A4 /* 空调除湿模式白色.png in Resources */,
+				6D58769627E84C5600CC55A4 /* T-1.png in Resources */,
+				6D58767B27E84C2800CC55A4 /* Background-1.png in Resources */,
+				6D58766827E84C1800CC55A4 /* 7-0.png in Resources */,
+				6D58766327E84C1800CC55A4 /* 1-1.png in Resources */,
+				6D58769A27E84C5600CC55A4 /* scene_01.png in Resources */,
+				6D58767C27E84C2800CC55A4 /* Background.png in Resources */,
+				6D58767727E84C1800CC55A4 /* 5-1.png in Resources */,
+				6D58767827E84C1800CC55A4 /* 6-0.png in Resources */,
+				6D58769527E84C5600CC55A4 /* title_01.png in Resources */,
+				6D58769427E84C5600CC55A4 /* T-5.png in Resources */,
+				6D58769227E84C5600CC55A4 /* T-0.png in Resources */,
+				6D58766D27E84C1800CC55A4 /* 2-0.png in Resources */,
+				6D58767127E84C1800CC55A4 /* 调光轨道_01.png in Resources */,
+				6D58762927E8476100CC55A4 /* LaunchScreen.storyboard in Resources */,
+				6D58762627E8476100CC55A4 /* Assets.xcassets in Resources */,
+				6D58766F27E84C1800CC55A4 /* 调光轨道_02.png in Resources */,
+				6D58767E27E84C3300CC55A4 /* EControl.momd in Resources */,
+				6D58769C27E84C5600CC55A4 /* masque_black.png in Resources */,
+				6D58767527E84C1800CC55A4 /* 8-1.png in Resources */,
+				6D58766127E84C1800CC55A4 /* 8-0.png in Resources */,
+				6D58766527E84C1800CC55A4 /* 4-0.png in Resources */,
+				6D58767327E84C1800CC55A4 /* 菜单条.png in Resources */,
+				6D58766727E84C1800CC55A4 /* 2-1.png in Resources */,
+				6D58769027E84C5600CC55A4 /* T-2.png in Resources */,
+				6D58766B27E84C1800CC55A4 /* 空调制冷模式白色.png in Resources */,
+				6D58762427E8476000CC55A4 /* Main.storyboard in Resources */,
+				6D58769327E84C5600CC55A4 /* T-3.png in Resources */,
+				6D58767427E84C1800CC55A4 /* 6-1.png in Resources */,
+				6D58766A27E84C1800CC55A4 /* 调光滑块.png in Resources */,
+				6D58768227E84C3F00CC55A4 /* HOME-blackColor.png in Resources */,
+				6D58766C27E84C1800CC55A4 /* 空调制热模式白色.png in Resources */,
+				6D58766427E84C1800CC55A4 /* 0-0.png in Resources */,
+				6D58767627E84C1800CC55A4 /* 4-1.png in Resources */,
+				6D58766627E84C1800CC55A4 /* 0-1.png in Resources */,
+				6D58765F27E84C1800CC55A4 /* 3-1.png in Resources */,
+				6D58769B27E84C5600CC55A4 /* T-6.png in Resources */,
+				6D58766927E84C1800CC55A4 /* 空调送风模式白色.png in Resources */,
+				6D58768127E84C3F00CC55A4 /* HOME.png in Resources */,
+				6D58769927E84C5600CC55A4 /* Project in Resources */,
+				6D58766227E84C1800CC55A4 /* 5-0.png in Resources */,
+				6D58769827E84C5600CC55A4 /* title_02.png in Resources */,
+				6D58769727E84C5600CC55A4 /* T-4.png in Resources */,
+				6D58769127E84C5600CC55A4 /* scene_02.png in Resources */,
+				6D58766E27E84C1800CC55A4 /* 7-1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D58761227E8476000CC55A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D58762127E8476000CC55A4 /* ViewController.m in Sources */,
+				6D58761B27E8476000CC55A4 /* AppDelegate.m in Sources */,
+				6D58762C27E8476100CC55A4 /* main.m in Sources */,
+				6D58761E27E8476000CC55A4 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D58762227E8476000CC55A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D58762327E8476000CC55A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D58762727E8476100CC55A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D58762827E8476100CC55A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D58762D27E8476100CC55A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6D58762E27E8476100CC55A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D58763027E8476100CC55A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W3NKFY99DD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EControl/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x5e.EControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D58763127E8476100CC55A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W3NKFY99DD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EControl/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x5e.EControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D58761127E8476000CC55A4 /* Build configuration list for PBXProject "EControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D58762D27E8476100CC55A4 /* Debug */,
+				6D58762E27E8476100CC55A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D58762F27E8476100CC55A4 /* Build configuration list for PBXNativeTarget "EControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D58763027E8476100CC55A4 /* Debug */,
+				6D58763127E8476100CC55A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D58760E27E8476000CC55A4 /* Project object */;
+}
