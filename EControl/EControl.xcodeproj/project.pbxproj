@@ -59,6 +59,8 @@
 		6D58769A27E84C5600CC55A4 /* scene_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768D27E84C5600CC55A4 /* scene_01.png */; };
 		6D58769B27E84C5600CC55A4 /* T-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768E27E84C5600CC55A4 /* T-6.png */; };
 		6D58769C27E84C5600CC55A4 /* masque_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768F27E84C5600CC55A4 /* masque_black.png */; };
+		6DC5E25E27E9DC13004585AF /* libEControl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58763827E8492A00CC55A4 /* libEControl.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		6DC5E26027E9DCC9004585AF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5E25F27E9DCC9004585AF /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,7 +68,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 6;
 			files = (
 				6D58764227E84AEB00CC55A4 /* libEControl.dylib in Embed Libraries */,
 			);
@@ -133,6 +135,7 @@
 		6D58768D27E84C5600CC55A4 /* scene_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene_01.png; sourceTree = "<group>"; };
 		6D58768E27E84C5600CC55A4 /* T-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-6.png"; sourceTree = "<group>"; };
 		6D58768F27E84C5600CC55A4 /* masque_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masque_black.png; sourceTree = "<group>"; };
+		6DC5E25F27E9DCC9004585AF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC5E26027E9DCC9004585AF /* AddressBook.framework in Frameworks */,
+				6DC5E25E27E9DC13004585AF /* libEControl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +191,7 @@
 		6D58763B27E849F300CC55A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DC5E25F27E9DCC9004585AF /* AddressBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -477,6 +484,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -514,6 +522,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EControl",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0x5e.EControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +552,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EControl",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0x5e.EControl;
