@@ -14,7 +14,6 @@
 		6D58762627E8476100CC55A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D58762527E8476100CC55A4 /* Assets.xcassets */; };
 		6D58762927E8476100CC55A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D58762727E8476100CC55A4 /* LaunchScreen.storyboard */; };
 		6D58762C27E8476100CC55A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58762B27E8476100CC55A4 /* main.m */; };
-		6D58764227E84AEB00CC55A4 /* libEControl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6D58763827E8492A00CC55A4 /* libEControl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		6D58765F27E84C1800CC55A4 /* 3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764527E84C1800CC55A4 /* 3-1.png */; };
 		6D58766027E84C1800CC55A4 /* 空调除湿模式白色.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764627E84C1800CC55A4 /* 空调除湿模式白色.png */; };
 		6D58766127E84C1800CC55A4 /* 8-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58764727E84C1800CC55A4 /* 8-0.png */; };
@@ -59,20 +58,21 @@
 		6D58769A27E84C5600CC55A4 /* scene_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768D27E84C5600CC55A4 /* scene_01.png */; };
 		6D58769B27E84C5600CC55A4 /* T-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768E27E84C5600CC55A4 /* T-6.png */; };
 		6D58769C27E84C5600CC55A4 /* masque_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D58768F27E84C5600CC55A4 /* masque_black.png */; };
-		6DC5E25E27E9DC13004585AF /* libEControl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58763827E8492A00CC55A4 /* libEControl.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		6DC5E26027E9DCC9004585AF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5E25F27E9DCC9004585AF /* AddressBook.framework */; };
+		6DC5E26F27E9F58E004585AF /* libEControl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5E26E27E9F58E004585AF /* libEControl.dylib */; };
+		6DC5E27127E9F598004585AF /* libEControl.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5E26E27E9F58E004585AF /* libEControl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6D58764327E84AEB00CC55A4 /* Embed Libraries */ = {
+		6DC5E26927E9EEAA004585AF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				6D58764227E84AEB00CC55A4 /* libEControl.dylib in Embed Libraries */,
+				6DC5E27127E9F598004585AF /* libEControl.dylib in Embed Frameworks */,
 			);
-			name = "Embed Libraries";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -90,7 +90,6 @@
 		6D58762827E8476100CC55A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D58762A27E8476100CC55A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D58762B27E8476100CC55A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6D58763827E8492A00CC55A4 /* libEControl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libEControl.dylib; sourceTree = "<group>"; };
 		6D58764527E84C1800CC55A4 /* 3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-1.png"; sourceTree = "<group>"; };
 		6D58764627E84C1800CC55A4 /* 空调除湿模式白色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空调除湿模式白色.png"; sourceTree = "<group>"; };
 		6D58764727E84C1800CC55A4 /* 8-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8-0.png"; sourceTree = "<group>"; };
@@ -136,6 +135,9 @@
 		6D58768E27E84C5600CC55A4 /* T-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-6.png"; sourceTree = "<group>"; };
 		6D58768F27E84C5600CC55A4 /* masque_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masque_black.png; sourceTree = "<group>"; };
 		6DC5E25F27E9DCC9004585AF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		6DC5E26E27E9F58E004585AF /* libEControl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libEControl.dylib; sourceTree = "<group>"; };
+		6DC5E27027E9F591004585AF /* CENetClientController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CENetClientController.h; sourceTree = "<group>"; };
+		6DC5E27227E9FB07004585AF /* IPAD_MAIN_LIGHT_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAD_MAIN_LIGHT_ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC5E26F27E9F58E004585AF /* libEControl.dylib in Frameworks */,
 				6DC5E26027E9DCC9004585AF /* AddressBook.framework in Frameworks */,
-				6DC5E25E27E9DC13004585AF /* libEControl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				6D58764427E84C0500CC55A4 /* Resource */,
-				6D58763827E8492A00CC55A4 /* libEControl.dylib */,
 				6D58761927E8476000CC55A4 /* AppDelegate.h */,
 				6D58761A27E8476000CC55A4 /* AppDelegate.m */,
 				6D58761C27E8476000CC55A4 /* SceneDelegate.h */,
@@ -184,6 +185,9 @@
 				6D58762727E8476100CC55A4 /* LaunchScreen.storyboard */,
 				6D58762A27E8476100CC55A4 /* Info.plist */,
 				6D58762B27E8476100CC55A4 /* main.m */,
+				6DC5E26E27E9F58E004585AF /* libEControl.dylib */,
+				6DC5E27027E9F591004585AF /* CENetClientController.h */,
+				6DC5E27227E9FB07004585AF /* IPAD_MAIN_LIGHT_ViewController.h */,
 			);
 			path = EControl;
 			sourceTree = "<group>";
@@ -257,7 +261,7 @@
 				6D58761227E8476000CC55A4 /* Sources */,
 				6D58761327E8476000CC55A4 /* Frameworks */,
 				6D58761427E8476000CC55A4 /* Resources */,
-				6D58764327E84AEB00CC55A4 /* Embed Libraries */,
+				6DC5E26927E9EEAA004585AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -511,6 +515,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W3NKFY99DD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EControl",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EControl/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -542,6 +550,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W3NKFY99DD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EControl",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EControl/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
