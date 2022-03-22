@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Smarthome-Tree>
+	<TagList>
+		<Tag Name="客厅吊灯OnOff" Index="1"/>
+		<Tag Name="客厅吊灯OnOff-S" Index="2"/>
+	</TagList>
+	<Light-Tree>
+		<Area Name="全部" Style="0">
+            <Scene>
+                <Scene Name="回家模式" Write="50" Data="1"/>
+                <Scene Name="离家模式" Write="51" Data="1"/>
+            </Scene>
+			<Area Name="玄关" Style="1">
+				<Light>
+					<Light Name="灯槽灯带" Style="0" Write="25" Read="26"/>
+					<Light Name="储藏间灯带" Style="0" Write="23" Read="24"/>
+				</Light>
+			</Area>
+			<Area Name="客厅" Style="1">
+				<Light>
+					<Light Name="吊灯" Style="1" Write="5" Read="6"/>
+					<Light Name="射灯" Style="0" Write="1" Read="2"/>
+					<Light Name="筒灯1" Style="1" Write="7" Read="8"/>
+					<Light Name="筒灯2" Style="1" Write="9" Read="10"/>
+					<Light Name="筒灯3" Style="1" Write="11" Read="12"/>
+                    <Light Name="门廊射灯" Style="0" Write="3" Read="4"/>
+				</Light>
+                <Scene>
+                    <Scene Name="会客模式" Write="64" Data="1"/>
+                    <Scene Name="影音模式" Write="65" Data="1"/>
+                </Scene>
+			</Area>
+            <Area Name="餐厅" Style="1">
+                <Light>
+                    <Light Name="吊灯" Style="1" Write="19" Read="20"/>
+                    <Light Name="射灯1" Style="0" Write="13" Read="14"/>
+                    <Light Name="射灯2" Style="0" Write="15" Read="16"/>
+                    <Light Name="筒灯" Style="1" Write="21" Read="22"/>
+                    <Light Name="门廊射灯" Style="0" Write="17" Read="18"/>
+                </Light>
+                <Scene>
+                    <Scene Name="宴客模式" Write="52" Data="2"/>
+                    <Scene Name="就餐模式" Write="53" Data="3"/>
+                </Scene>
+            </Area>
+            <Area Name="主卧室" Style="1">
+				<Light>
+					<Light Name="床头射灯" Style="0" Write="29" Read="30"/>
+					<Light Name="筒灯" Style="0" Write="33" Read="34"/>
+					<Light Name="灯带" Style="0" Write="35" Read="36"/>
+					<Light Name="电视射灯" Style="0" Write="31" Read="32"/>
+					<Light Name="书桌灯带" Style="0" Write="27" Read="28"/>
+				</Light>
+                <Scene>
+                    <Scene Name="阅读模式" Write="76" Data="2"/>
+                    <Scene Name="影视模式" Write="77" Data="3"/>
+                    <Scene Name="起夜模式" Write="78" Data="2"/>
+                    <Scene Name="睡眠模式" Write="79" Data="3"/>
+                </Scene>
+			</Area>
+        </Area>
+	</Light-Tree>
+	<Blind-Tree>
+        <Area Name="全部" Style="0">
+			<Area Name="客厅" Style="1">
+				<Blind Name="左纱帘" Open="215" OpenData="1" Close="216" CloseData="1" Stop="217" StopData="1" Percentage="218"/>
+				<Blind Name="左布帘" Open="219" OpenData="1" Close="220" CloseData="1" Stop="221" StopData="1" Percentage="222"/>
+				<Blind Name="右纱帘" Open="223" OpenData="1" Close="224" CloseData="1" Stop="225" StopData="1" Percentage="226"/>
+				<Blind Name="右布帘" Open="227" OpenData="1" Close="228" CloseData="1" Stop="229" StopData="1" Percentage="230"/>
+			</Area>
+			<Area Name="餐厅" Style="1">
+				<Blind Name="纱帘" Open="207" OpenData="1" Close="208" CloseData="1" Stop="209" StopData="1" Percentage="210"/>
+				<Blind Name="布帘" Open="211" OpenData="1" Close="212" CloseData="1" Stop="213" StopData="1" Percentage="214"/>
+			</Area>
+            <Area Name="主卧" Style="1">
+                <Blind Name="纱帘" Open="231" OpenData="1" Close="232" CloseData="1" Stop="232" StopData="1" Percentage="234"/>
+                <Blind Name="布帘" Open="235" OpenData="1" Close="236" CloseData="1" Stop="237" StopData="1" Percentage="238"/>
+            </Area>
+        </Area>
+	</Blind-Tree>
+	<Air-Tree>
+		<Area Name="全部" Style="0">
+			<Area Name="客厅" Style="1">
+				<Air Name="客厅空调1（主控）" OnOff="85" Slwd="88" Setwd="89" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="87" FanMode="0" Fan="86"/>
+				<Air Name="客厅空调2" OnOff="90" Slwd="93" Setwd="94" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="92" FanMode="0" Fan="91"/>
+			</Area>
+			<Area Name="餐厅" Style="1">
+				<Air Name="餐厅空调" OnOff="95" Slwd="98" Setwd="99" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="97" FanMode="0" Fan="96"/>
+			</Area>
+            <Area Name="书房" Style="1">
+                <Air Name="书房空调" OnOff="100" Slwd="103" Setwd="104" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="102" FanMode="0" Fan="101"/>
+            </Area>
+            <Area Name="主卧" Style="1">
+                <Air Name="主卧空调" OnOff="105" Slwd="108" Setwd="109" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="107" FanMode="0" Fan="106"/>
+                <Air Name="主卧衣帽间" OnOff="125" Slwd="128" Setwd="129" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="127" FanMode="0" Fan="126"/>
+            </Area>
+            <Area Name="客房" Style="1">
+                <Air Name="客房1" OnOff="110" Slwd="113" Setwd="114" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="112" FanMode="0" Fan="111"/>
+                <Air Name="客房2" OnOff="115" Slwd="118" Setwd="119" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="117" FanMode="0" Fan="116"/>
+                <Air Name="客房3" OnOff="120" Slwd="123" Setwd="124" SetwdMax="29" SetwdMin="19" AirMode="15" Mode="122" FanMode="0" Fan="121"/>
+            </Area>
+		</Area>		
+	</Air-Tree>
+	<Underfloor-Tree>
+		<Area Name="全部" Style="0">
+			<Area Name="客厅" Style="1">
+				<Underfloor Name="客厅地暖" OnOff="183" Slwd="185" Setwd="184" SetwdMax="29" SetwdMin="19"/>
+			</Area>
+			<Area Name="餐厅" Style="1">
+				<Underfloor Name="餐厅地暖" OnOff="186" Slwd="188" Setwd="187" SetwdMax="29" SetwdMin="19"/>
+			</Area>
+            <Area Name="书房" Style="1">
+                <Underfloor Name="书房地暖" OnOff="189" Slwd="191" Setwd="190" SetwdMax="29" SetwdMin="19"/>
+            </Area>
+            <Area Name="主卧" Style="1">
+                <Underfloor Name="主卧地暖" OnOff="192" Slwd="194" Setwd="193" SetwdMax="29" SetwdMin="19"/>
+            </Area>
+            <Area Name="客房" Style="1">
+                <Underfloor Name="客房1" OnOff="195" Slwd="197" Setwd="196" SetwdMax="29" SetwdMin="19"/>
+                <Underfloor Name="客房2" OnOff="198" Slwd="200" Setwd="199" SetwdMax="29" SetwdMin="19"/>
+                <Underfloor Name="客房3" OnOff="201" Slwd="203" Setwd="202" SetwdMax="29" SetwdMin="19"/>
+            </Area>
+		</Area>		
+	</Underfloor-Tree>
+    <Newfan-Tree>
+        <Area Name="全部" Style="0">
+            <Area Name="客厅" Style="1">
+                <Newfan Name="客厅新风" style="1" state="185" FAN1="184" FAN2="29" SWWD="19" SWSD="19" control="19"/>
+            </Area>
+            <Area Name="主卧" Style="1">
+                <Newfan Name="主卧新风" style="1" state="185" FAN1="184" FAN2="29" SWWD="19" SWSD="19" control="19"/>
+            </Area>
+        </Area>		
+    </Newfan-Tree>
+</Smarthome-Tree>
